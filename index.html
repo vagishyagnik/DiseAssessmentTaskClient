@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dice.Tech Assessment | Weather App</title>
+  <link rel="stylesheet" href="login-logout-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<script src="js/utils.js"></script>
+<script> 
+    if (localStorage.getItem('clientSecret')) {
+      console.log('Client Secret is present in localStorage.');
+      window.location.href = 'hourly.html';
+    } else {
+        console.log('Client Secret is not present in localStorage.');
+    }
+</script>
+<body>
+<div class="wrapper">
+    <section class="form signup">
+        <header>Weather App (Signup)</header>
+        <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
+        <div class="error-text"></div>
+        <div class="name-details">
+            <div class="field input">
+            <label>Username</label>
+            <input type="text" id="username" name="clientName" placeholder="Username" required>
+            </div>
+        </div>
+        <div class="field input">
+            <label>Password</label>
+            <input type="password" id="password" name="clientSecret" placeholder="Enter new password" required>
+            <i class="fas fa-eye"></i>
+        </div>
+        <div class="field button">
+            <input type="submit" name="submit" value="Continue to Weather App">
+        </div>
+        </form>
+        <div class="link">Already signed up? <a href="login.html">Login now</a></div>
+    </section>
+</div>
+
+<script src="js/pass-show-hide.js"></script>
+<script src="js/signup.js"></script>
+
+</body>
+</html>
