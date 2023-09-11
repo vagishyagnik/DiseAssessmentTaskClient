@@ -10,11 +10,11 @@
 </head>
 <script src="js/utils.js"></script>
 <script> 
-  if (localStorage.getItem('sessionId')) {
-    console.log('Session Id is present in localStorage.');
+  if (localStorage.getItem('jwtToken')) {
+    console.log('JwtToken is present in localStorage.');
     window.location.href = 'hourly.html';
   } else {
-      console.log('Session Id is not present in localStorage.');
+      console.log('JwtToken is not present in localStorage.');
   }
 </script>
 <body>

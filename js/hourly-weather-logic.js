@@ -85,8 +85,7 @@
     }
 
     function fetchRequestSettings(locationName) {
-        let clientId = localStorage.getItem("clientId")
-        let clientSecret = localStorage.getItem("clientSecret")
+        let jwtToken = localStorage.getItem("jwtToken")
         return {
             "url": backendURL+"/hourly-forecast?city="+locationName,
             "method": "GET",
@@ -95,8 +94,7 @@
               "Accept": "*/*",
               "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8",
               "Content-Type": "application/json",
-              "clientId": clientId,
-              "clientSecret": clientSecret
+              "Authorization": "Bearer " + jwtToken
             }
           };
     }

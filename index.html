@@ -10,11 +10,11 @@
 </head>
 <script src="js/utils.js"></script>
 <script> 
-    if (localStorage.getItem('clientSecret')) {
-      console.log('Client Secret is present in localStorage.');
+    if (localStorage.getItem('jwtTokwn')) {
+      console.log('Jwt Token is present in localStorage.');
       window.location.href = 'hourly.html';
     } else {
-        console.log('Client Secret is not present in localStorage.');
+        console.log('Jwt Token is not present in localStorage.');
     }
 </script>
 <body>
