@@ -15,8 +15,8 @@
 		<link rel="stylesheet" href="style.css">
 
 		<script> 
-			if (localStorage.getItem('clientSecret') == null) {
-			  console.log('Client Secret is not present in localStorage.');
+			if (localStorage.getItem('jwtToken') == null) {
+			  console.log('JwtToken is not present in localStorage.');
 			  window.location.href = 'login.html';
 			}
 		</script>

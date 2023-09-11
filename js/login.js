@@ -20,8 +20,8 @@ continueBtn.onclick = ()=>{
               if(data != null) {
                 // sessionId & userId are required in headers for any further requests...
                 console.log(data)
-                localStorage.setItem('clientId', data["clientId"]);
-                localStorage.setItem('clientSecret', data["clientSecret"]);
+                localStorage.setItem('jwtToken', data["jwtToken"]);
+                localStorage.setItem('clientSecret', data["clientName"]);
                 location.href = "hourly.html";
               } else {
                 errorText.style.display = "block";
@@ -32,10 +32,6 @@ continueBtn.onclick = ()=>{
     }
     const username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
-
-
-    console.log(username)
-    console.log(password)
 
     const requestBody = {
         clientName: username,
