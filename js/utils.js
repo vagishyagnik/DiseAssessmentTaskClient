@@ -84,4 +84,4 @@ function toDateMonth(timestamp, hoursAfterUTC) {
     return `${day} ${month}`;
 }
 
-let backendURL = "https://separate-tramp-production.up.railway.app";
+let backendURL = "http://localhost:8080";
